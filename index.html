@@ -6,554 +6,1433 @@
 
   <title>SPN DISPLAY SOLUTIONS | Signage & Display Solutions</title>
 
-  <meta name="description" content="SPN DISPLAY SOLUTIONS — Professional signage and display solutions for corporate brands, showrooms, dealerships, offices and multi-location networks across Bangalore & Karnataka.">
+  <meta
+    name="description"
+    content="SPN DISPLAY SOLUTIONS provides professional signage and display solutions for corporate brands, showrooms, dealerships, offices and multi-location networks across Bangalore and Karnataka."
+  >
+
+  <meta name="theme-color" content="#050507">
 
   <style>
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
+    /* =========================
+       GLOBAL
+    ========================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    body{
-      font-family:Arial,Helvetica,sans-serif;
-      background:#050507;
-      color:#f5f5f7;
-      line-height:1.6;
+    html {
+      scroll-behavior: smooth;
     }
 
-    header{
-      padding:24px 7%;
-      border-bottom:1px solid #24202f;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      background: #050507;
+      color: #f5f5f7;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    .logo{
-      font-size:24px;
-      font-weight:800;
-      letter-spacing:3px;
+    img {
+      max-width: 100%;
     }
 
-    .logo span{
-      color:#a879ff;
-      font-size:11px;
-      display:block;
-      letter-spacing:4px;
-      margin-top:-4px;
+    a {
+      color: inherit;
     }
 
-    nav a{
-      color:#bbb;
-      text-decoration:none;
-      margin-left:24px;
-      font-size:14px;
+    .container {
+      width: min(1180px, 88%);
+      margin: 0 auto;
     }
 
-    nav a:hover{
-      color:#fff;
+    .eyebrow {
+      color: #b58cff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
     }
 
-    .hero{
-      min-height:75vh;
-      display:flex;
-      align-items:center;
-      padding:80px 7%;
+    .section-label {
+      color: #9d6df1;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+    }
+
+    .section-intro {
+      color: #a8a6b1;
+      max-width: 720px;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 25px;
+      background: #8d55e8;
+      border: 1px solid #a56dff;
+      border-radius: 4px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition:
+        background .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+    }
+
+    .btn:hover {
+      background: #a66cff;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(141, 85, 232, .25);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border-color: #393044;
+      color: #e7e3ed;
+    }
+
+    .btn-secondary:hover {
+      background: #15101d;
+      border-color: #674a87;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      background: rgba(5, 5, 7, .88);
+      border-bottom: 1px solid #211c2a;
+      backdrop-filter: blur(16px);
+    }
+
+    .header-inner {
+      width: min(1180px, 88%);
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo {
+      text-decoration: none;
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      line-height: 1;
+    }
+
+    .logo span {
+      display: block;
+      color: #a879ff;
+      font-size: 9px;
+      letter-spacing: 3.5px;
+      margin-top: 7px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
+    nav a {
+      color: #aaa6b1;
+      text-decoration: none;
+      font-size: 13px;
+      transition: color .2s ease;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .nav-cta {
+      padding: 10px 17px;
+      border: 1px solid #514164;
+      color: #ffffff;
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+
       background:
-        radial-gradient(circle at 80% 30%,#31105d 0,transparent 35%),
-        radial-gradient(circle at 20% 80%,#160b29 0,transparent 35%),
+        radial-gradient(
+          circle at 78% 20%,
+          rgba(107, 43, 190, .30),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 15% 80%,
+          rgba(73, 31, 112, .22),
+          transparent 32%
+        ),
         #050507;
     }
 
-    .hero-content{
-      max-width:850px;
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5,5,7,.98) 0%,
+          rgba(5,5,7,.84) 43%,
+          rgba(5,5,7,.30) 100%
+        );
     }
 
-    .eyebrow{
-      color:#b58cff;
-      letter-spacing:4px;
-      font-size:13px;
-      font-weight:bold;
-      margin-bottom:20px;
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(5,5,7,.98) 0%,
+          rgba(5,5,7,.88) 38%,
+          rgba(5,5,7,.35) 100%
+        ),
+        url("p09_02.jpeg");
+
+      background-size: cover;
+      background-position: center;
+      opacity: .65;
     }
 
-    h1{
-      font-size:clamp(48px,8vw,92px);
-      line-height:1;
-      letter-spacing:-4px;
-      margin-bottom:28px;
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(1180px, 88%);
+      margin: 0 auto;
+      padding: 100px 0;
     }
 
-    .hero p{
-      max-width:680px;
-      color:#b8b8c0;
-      font-size:19px;
-      margin-bottom:34px;
+    .hero h1 {
+      max-width: 900px;
+      font-size: clamp(48px, 8vw, 92px);
+      line-height: .96;
+      letter-spacing: -5px;
+      margin-bottom: 28px;
     }
 
-    .btn{
-      display:inline-block;
-      padding:15px 26px;
-      background:#8d55e8;
-      color:#fff;
-      text-decoration:none;
-      font-weight:bold;
-      border-radius:4px;
+    .hero h1 span {
+      color: #b98aff;
     }
 
-    .btn:hover{
-      background:#a66cff;
+    .hero p {
+      max-width: 690px;
+      color: #c0bdc8;
+      font-size: clamp(16px, 2vw, 19px);
+      margin-bottom: 34px;
     }
 
-    section{
-      padding:90px 7%;
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
-    .section-title{
-      font-size:38px;
-      margin-bottom:45px;
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 55px;
     }
 
-    .services{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
+    .proof-item strong {
+      display: block;
+      font-size: 13px;
+      color: #ffffff;
+      margin-bottom: 3px;
     }
 
-    .card{
-      border:1px solid #25212f;
-      background:#0b0a0f;
-      padding:30px;
-      min-height:190px;
+    .proof-item span {
+      color: #85818c;
+      font-size: 12px;
     }
 
-    .number{
-      color:#9c6bea;
-      font-size:13px;
-      letter-spacing:2px;
-      margin-bottom:18px;
+
+    /* =========================
+       SECTIONS
+    ========================== */
+
+    section {
+      padding: 105px 0;
     }
 
-    .card h3{
-      margin-bottom:12px;
-      font-size:20px;
+    .section-head {
+      margin-bottom: 48px;
     }
 
-    .card p{
-      color:#9999a3;
-      font-size:14px;
+
+    /* =========================
+       COMPANY
+    ========================== */
+
+    .company {
+      background: #09080d;
+      border-top: 1px solid #201b29;
+      border-bottom: 1px solid #201b29;
     }
 
-    .about{
-      background:#0a0910;
-      border-top:1px solid #201c29;
-      border-bottom:1px solid #201c29;
+    .company-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 70px;
+      align-items: center;
     }
 
-    .about p{
-      max-width:850px;
-      color:#b5b5bd;
-      font-size:18px;
+    .company-copy p {
+      color: #aaa7b1;
+      font-size: 17px;
+      margin-top: 20px;
     }
 
-    /* Portfolio */
-
-    .portfolio-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
+    .company-points {
+      display: grid;
+      gap: 14px;
+      margin-top: 30px;
     }
 
-    .portfolio-item{
-      border:1px solid #25212f;
-      background:#0b0a0f;
-      overflow:hidden;
-      min-height:220px;
+    .company-point {
+      padding: 17px 19px;
+      border-left: 2px solid #8d55e8;
+      background: #0d0b12;
+      color: #d7d3dc;
+      font-size: 14px;
     }
 
-    .portfolio-item img{
-      width:100%;
-      height:260px;
-      display:block;
-      object-fit:cover;
-      transition:transform .3s ease;
+    .company-image {
+      border: 1px solid #2b2436;
+      background: #0b0a0f;
+      overflow: hidden;
     }
 
-    .portfolio-item:hover img{
-      transform:scale(1.03);
+    .company-image img {
+      width: 100%;
+      height: 470px;
+      display: block;
+      object-fit: cover;
     }
 
-    .targets{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
+
+    /* =========================
+       PRODUCTS
+    ========================== */
+
+    .products {
+      background: #050507;
     }
 
-    .tag{
-      border:1px solid #30283d;
-      padding:13px 18px;
-      color:#c7c1d1;
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
 
-    .contact{
-      text-align:center;
-      background:linear-gradient(135deg,#100b18,#190d2b);
+    .product-card {
+      position: relative;
+      min-height: 220px;
+      padding: 30px;
+      background:
+        linear-gradient(
+          145deg,
+          #100d15,
+          #09080d
+        );
+      border: 1px solid #282230;
+      overflow: hidden;
+      transition:
+        transform .25s ease,
+        border-color .25s ease;
     }
 
-    .contact p{
-      color:#aaa;
-      margin:12px 0 28px;
+    .product-card::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      right: -45px;
+      bottom: -45px;
+      border-radius: 50%;
+      background: rgba(141, 85, 232, .10);
     }
 
-    footer{
-      padding:28px 7%;
-      color:#777;
-      font-size:13px;
-      border-top:1px solid #24202f;
-      text-align:center;
+    .product-card:hover {
+      transform: translateY(-4px);
+      border-color: #634583;
     }
 
-    @media(max-width:800px){
+    .product-number {
+      color: #9c6bea;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
 
-      nav{
-        display:none;
+    .product-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .product-card p {
+      color: #94919d;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       MANUFACTURING
+    ========================== */
+
+    .manufacturing {
+      background: #0a0910;
+      border-top: 1px solid #211c2a;
+      border-bottom: 1px solid #211c2a;
+    }
+
+    .manufacturing-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .manufacturing-image {
+      border: 1px solid #2b2436;
+      overflow: hidden;
+    }
+
+    .manufacturing-image img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .manufacturing-copy p {
+      color: #aaa7b1;
+      font-size: 17px;
+      margin: 20px 0 30px;
+    }
+
+    .process {
+      display: grid;
+      gap: 12px;
+    }
+
+    .process-item {
+      display: grid;
+      grid-template-columns: 45px 1fr;
+      gap: 15px;
+      align-items: start;
+      padding: 15px 0;
+      border-bottom: 1px solid #24202c;
+    }
+
+    .process-number {
+      color: #b184f3;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .process-item strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    .process-item span {
+      color: #85818c;
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       PROJECTS
+    ========================== */
+
+    .projects {
+      background: #050507;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .project {
+      position: relative;
+      min-height: 300px;
+      overflow: hidden;
+      border: 1px solid #27212f;
+      background: #0a090d;
+    }
+
+    .project img {
+      width: 100%;
+      height: 320px;
+      display: block;
+      object-fit: cover;
+      transition: transform .45s ease;
+    }
+
+    .project:hover img {
+      transform: scale(1.045);
+    }
+
+    .project-overlay {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 50px 20px 18px;
+
+      background:
+        linear-gradient(
+          transparent,
+          rgba(0,0,0,.90)
+        );
+    }
+
+    .project-overlay strong {
+      font-size: 14px;
+    }
+
+    .project-overlay span {
+      display: block;
+      color: #aaa5b1;
+      font-size: 11px;
+      margin-top: 3px;
+    }
+
+
+    /* =========================
+       CAPABILITY
+    ========================== */
+
+    .capability {
+      background: #09080d;
+      border-top: 1px solid #211c2a;
+      border-bottom: 1px solid #211c2a;
+    }
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .capability-card {
+      padding: 28px;
+      border: 1px solid #282230;
+      background: #0c0a10;
+    }
+
+    .capability-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .capability-card span {
+      color: #898590;
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       CLIENT TYPES
+    ========================== */
+
+    .client-types {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 13px 18px;
+      border: 1px solid #30283d;
+      background: #0a090e;
+      color: #c7c1d1;
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+      text-align: center;
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(86, 38, 138, .25),
+          transparent 50%
+        ),
+        #100b18;
+    }
+
+    .contact .section-title {
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact p {
+      color: #aaa5b1;
+      margin: 12px auto 25px;
+      max-width: 600px;
+    }
+
+    .contact-details {
+      margin: 25px 0 30px;
+    }
+
+    .contact-details a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .contact-details a:hover {
+      color: #b98aff;
+    }
+
+    .contact-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 28px 0;
+      color: #6f6b75;
+      font-size: 12px;
+      text-align: center;
+      border-top: 1px solid #211c2a;
+      background: #050507;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      nav {
+        display: none;
       }
 
-      .services{
-        grid-template-columns:1fr;
+      .hero {
+        min-height: 82vh;
       }
 
-      .portfolio-grid{
-        grid-template-columns:1fr;
+      .hero-image {
+        background-position: 58% center;
       }
 
-      .portfolio-item img{
-        height:240px;
+      .company-grid,
+      .manufacturing-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
       }
 
-      section{
-        padding:65px 6%;
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .hero{
-        padding:70px 6%;
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      h1{
-        letter-spacing:-2px;
+      .capability-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
+      .company-image img,
+      .manufacturing-image img {
+        height: 400px;
+      }
+    }
+
+
+    @media (max-width: 600px) {
+
+      .container,
+      .header-inner,
+      .hero-content {
+        width: 90%;
+      }
+
+      header {
+        padding: 17px 0;
+      }
+
+      .logo {
+        font-size: 21px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .hero {
+        min-height: 86vh;
+      }
+
+      .hero-content {
+        padding: 80px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(45px, 14vw, 70px);
+        letter-spacing: -3px;
+      }
+
+      .hero-proof {
+        gap: 18px;
+        margin-top: 40px;
+      }
+
+      .product-grid,
+      .project-grid,
+      .capability-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .company-image img,
+      .manufacturing-image img {
+        height: 300px;
+      }
+
+      .project img {
+        height: 280px;
+      }
+
+      .hero-actions,
+      .contact-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
 
+
 <body>
 
-<header>
-  <div class="logo">
-    SPN.
-    <span>DISPLAY SOLUTIONS</span>
-  </div>
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <header>
+    <div class="header-inner">
 
+      <a class="logo" href="#">
+        SPN.
+        <span>DISPLAY SOLUTIONS</span>
+      </a>
 
-<!-- HERO -->
+      <nav>
+        <a href="#company">Company</a>
+        <a href="#products">Products</a>
+        <a href="#manufacturing">Manufacturing</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav-cta">Enquire</a>
+      </nav>
 
-<section class="hero">
-  <div class="hero-content">
-
-    <div class="eyebrow">
-      SIGNAGE • PRECISION • NETWORK
     </div>
-
-    <h1>
-      Making Brands Visible.
-    </h1>
-
-    <p>
-      Professional signage & display solutions for corporate brands,
-      showrooms, dealerships, offices and multi-location networks across
-      Bangalore & Karnataka.
-    </p>
-
-    <a
-      class="btn"
-      href="https://wa.me/919066476900?text=Hello%20SPN%20DISPLAY%20SOLUTIONS,%20I%20would%20like%20to%20discuss%20a%20signage%20project."
-      target="_blank">
-      Start a Project
-    </a>
-
-  </div>
-</section>
+  </header>
 
 
-<!-- SERVICES -->
+  <!-- =========================
+       HERO
+  ========================== -->
 
-<section id="services">
+  <section class="hero">
 
-  <h2 class="section-title">
-    Our Solutions
-  </h2>
+    <div class="hero-image"></div>
 
-  <div class="services">
+    <div class="hero-content">
 
-    <div class="card">
-      <div class="number">01</div>
-      <h3>Corporate Signage</h3>
+      <div class="eyebrow">
+        SIGNAGE • PRECISION • NETWORK
+      </div>
+
+      <h1>
+        Making Brands
+        <span>Visible.</span>
+      </h1>
+
       <p>
-        Professional exterior and interior signage for corporate environments.
+        Professional signage and display solutions for corporate brands,
+        showrooms, dealerships, offices and multi-location networks
+        across Bangalore and Karnataka.
       </p>
+
+      <div class="hero-actions">
+
+        <a
+          class="btn"
+          href="https://wa.me/919066476900?text=Hello%20SPN%20DISPLAY%20SOLUTIONS,%20I%20would%20like%20to%20discuss%20a%20signage%20project."
+          target="_blank"
+          rel="noopener">
+          Start a Project
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="#projects">
+          View Our Work
+        </a>
+
+      </div>
+
+      <div class="hero-proof">
+
+        <div class="proof-item">
+          <strong>Fabrication</strong>
+          <span>End-to-end execution</span>
+        </div>
+
+        <div class="proof-item">
+          <strong>Installation</strong>
+          <span>On-site execution</span>
+        </div>
+
+        <div class="proof-item">
+          <strong>Maintenance</strong>
+          <span>Service & replacement</span>
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="card">
-      <div class="number">02</div>
-      <h3>3D & Acrylic Letters</h3>
+  </section>
+
+
+  <!-- =========================
+       COMPANY
+  ========================== -->
+
+  <section class="company" id="company">
+
+    <div class="container company-grid">
+
+      <div class="company-copy">
+
+        <div class="section-label">
+          SPN DISPLAY SOLUTIONS
+        </div>
+
+        <h2 class="section-title">
+          One partner for the complete signage journey.
+        </h2>
+
+        <p>
+          SPN DISPLAY SOLUTIONS provides signage and display execution
+          for businesses that require professional brand visibility,
+          consistent fabrication and reliable on-site execution.
+        </p>
+
+        <div class="company-points">
+
+          <div class="company-point">
+            Fabrication and finishing
+          </div>
+
+          <div class="company-point">
+            Delivery and installation
+          </div>
+
+          <div class="company-point">
+            Sign replacement, repair and maintenance
+          </div>
+
+          <div class="company-point">
+            Multi-location signage execution
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="company-image">
+
+        <img
+          src="p11_03.jpeg"
+          alt="SPN signage project">
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PRODUCTS
+  ========================== -->
+
+  <section class="products" id="products">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="section-label">
+          PRODUCTS & SOLUTIONS
+        </div>
+
+        <h2 class="section-title">
+          A complete signage system.
+        </h2>
+
+        <p class="section-intro">
+          From dimensional letters to illuminated fascia and
+          network signage, SPN provides solutions designed around
+          visibility, finish and brand consistency.
+        </p>
+
+      </div>
+
+
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="product-number">01</div>
+          <h3>Corporate Signage</h3>
+          <p>
+            Exterior and interior signage for corporate offices,
+            commercial environments and branded spaces.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-number">02</div>
+          <h3>3D & Acrylic Letters</h3>
+          <p>
+            Dimensional acrylic, stainless steel and premium
+            fabricated lettering.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-number">03</div>
+          <h3>LED & Illuminated Signs</h3>
+          <p>
+            Front-lit, back-lit and illuminated signage for
+            high-visibility brand presentation.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-number">04</div>
+          <h3>ACP Fascia</h3>
+          <p>
+            Clean and durable ACP-based fascia systems for
+            showrooms, offices and commercial locations.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-number">05</div>
+          <h3>Showroom & Dealer Signage</h3>
+          <p>
+            Brand-focused signage systems for dealerships,
+            showrooms and service environments.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-number">06</div>
+          <h3>Repair & Maintenance</h3>
+          <p>
+            Replacement, repair, installation and ongoing
+            signage maintenance support.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       MANUFACTURING
+  ========================== -->
+
+  <section class="manufacturing" id="manufacturing">
+
+    <div class="container manufacturing-grid">
+
+      <div class="manufacturing-image">
+
+        <img
+          src="p12_04.jpeg"
+          alt="SPN signage fabrication and project work">
+
+      </div>
+
+
+      <div class="manufacturing-copy">
+
+        <div class="section-label">
+          EXECUTION CAPABILITY
+        </div>
+
+        <h2 class="section-title">
+          Built with precision.
+          Delivered professionally.
+        </h2>
+
+        <p>
+          SPN approaches signage as an execution system — combining
+          fabrication, finishing, delivery, installation and service
+          to maintain consistent brand presentation.
+        </p>
+
+
+        <div class="process">
+
+          <div class="process-item">
+            <div class="process-number">01</div>
+            <div>
+              <strong>Requirement & Planning</strong>
+              <span>Understanding site, dimensions, application and brand requirements.</span>
+            </div>
+          </div>
+
+          <div class="process-item">
+            <div class="process-number">02</div>
+            <div>
+              <strong>Fabrication</strong>
+              <span>Production and finishing according to the required signage specification.</span>
+            </div>
+          </div>
+
+          <div class="process-item">
+            <div class="process-number">03</div>
+            <div>
+              <strong>Quality & Finishing</strong>
+              <span>Attention to appearance, fit, finish and installation readiness.</span>
+            </div>
+          </div>
+
+          <div class="process-item">
+            <div class="process-number">04</div>
+            <div>
+              <strong>Installation & Service</strong>
+              <span>Site installation, replacement, repair and maintenance support.</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROJECTS
+  ========================== -->
+
+  <section class="projects" id="projects">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="section-label">
+          SELECTED WORK
+        </div>
+
+        <h2 class="section-title">
+          Real work. Real visibility.
+        </h2>
+
+        <p class="section-intro">
+          A selection of signage and display work from the available
+          SPN project portfolio.
+        </p>
+
+      </div>
+
+
+      <div class="project-grid">
+
+        <div class="project">
+          <img
+            src="p09_02.jpeg"
+            alt="SPN signage project">
+          <div class="project-overlay">
+            <strong>Signage Installation</strong>
+            <span>Completed project</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <img
+            src="p09_04.jpeg"
+            alt="SPN signage project">
+          <div class="project-overlay">
+            <strong>Exterior Signage</strong>
+            <span>Completed project</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <img
+            src="p09_06.jpeg"
+            alt="SPN signage project">
+          <div class="project-overlay">
+            <strong>Brand Visibility</strong>
+            <span>Completed project</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <img
+            src="p11_03.jpeg"
+            alt="SPN signage project">
+          <div class="project-overlay">
+            <strong>Corporate Signage</strong>
+            <span>Completed project</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <img
+            src="p11_04.jpeg"
+            alt="SPN signage project">
+          <div class="project-overlay">
+            <strong>Display Solution</strong>
+            <span>Completed project</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <img
+            src="p11_07.jpeg"
+            alt="SPN signage project">
+          <div class="project-overlay">
+            <strong>Signage Execution</strong>
+            <span>Completed project</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <img
+            src="p12_04.jpeg"
+            alt="SPN signage project">
+          <div class="project-overlay">
+            <strong>Fabricated Signage</strong>
+            <span>Completed project</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <img
+            src="p13_02.jpeg"
+            alt="SPN signage project">
+          <div class="project-overlay">
+            <strong>Commercial Signage</strong>
+            <span>Completed project</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <img
+            src="p13_06.jpeg"
+            alt="SPN signage project">
+          <div class="project-overlay">
+            <strong>Brand Display</strong>
+            <span>Completed project</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <img
+            src="p16_05.jpeg"
+            alt="SPN signage project">
+          <div class="project-overlay">
+            <strong>Signage Project</strong>
+            <span>Completed project</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CAPABILITY
+  ========================== -->
+
+  <section class="capability">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="section-label">
+          WHY SPN
+        </div>
+
+        <h2 class="section-title">
+          Execution that scales with the brand.
+        </h2>
+
+      </div>
+
+
+      <div class="capability-grid">
+
+        <div class="capability-card">
+          <strong>End-to-End Execution</strong>
+          <span>
+            Fabrication, finishing, delivery, installation and service.
+          </span>
+        </div>
+
+        <div class="capability-card">
+          <strong>Brand Consistency</strong>
+          <span>
+            Focused on consistent signage presentation across locations.
+          </span>
+        </div>
+
+        <div class="capability-card">
+          <strong>Site Installation</strong>
+          <span>
+            Professional on-site installation and replacement support.
+          </span>
+        </div>
+
+        <div class="capability-card">
+          <strong>Service Support</strong>
+          <span>
+            Repair, replacement and maintenance for existing signage.
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       BUILT FOR
+  ========================== -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="section-label">
+          INDUSTRIES & ENVIRONMENTS
+        </div>
+
+        <h2 class="section-title">
+          Built for businesses that need visibility.
+        </h2>
+
+      </div>
+
+
+      <div class="client-types">
+
+        <div class="tag">
+          Showrooms & Dealerships
+        </div>
+
+        <div class="tag">
+          Corporate Offices
+        </div>
+
+        <div class="tag">
+          Service Centres
+        </div>
+
+        <div class="tag">
+          Retail & Commercial
+        </div>
+
+        <div class="tag">
+          Multi-location Networks
+        </div>
+
+        <div class="tag">
+          Brand Rollouts
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section class="contact" id="contact">
+
+    <div class="container">
+
+      <div class="section-label">
+        CORPORATE ENQUIRY
+      </div>
+
+      <h2 class="section-title">
+        Have a signage requirement?
+        Let's discuss it.
+      </h2>
+
       <p>
-        Precision-finished acrylic, stainless steel and dimensional letters.
+        Share your requirement, location or project scope with SPN
+        DISPLAY SOLUTIONS.
       </p>
+
+
+      <div class="contact-details">
+
+        <p>
+          <strong>SPN DISPLAY SOLUTIONS</strong><br>
+          #94, Hommadevanahalli, C.K. Palya Cross<br>
+          Hommadevanahalli, Bangalore – 560083
+        </p>
+
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:+919066476900">
+            9066476900
+          </a>
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:info@spndisplaysolutions.in">
+            info@spndisplaysolutions.in
+          </a>
+        </p>
+
+      </div>
+
+
+      <div class="contact-actions">
+
+        <a
+          class="btn"
+          href="https://wa.me/919066476900?text=Hello%20SPN%20DISPLAY%20SOLUTIONS,%20I%20would%20like%20to%20discuss%20a%20signage%20project."
+          target="_blank"
+          rel="noopener">
+          WhatsApp SPN
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="mailto:info@spndisplaysolutions.in">
+          Send Email
+        </a>
+
+      </div>
+
     </div>
 
-    <div class="card">
-      <div class="number">03</div>
-      <h3>LED & Illuminated</h3>
-      <p>
-        Illuminated signs designed for strong visibility day and night.
-      </p>
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      © 2026 SPN DISPLAY SOLUTIONS
+      — Signage & Display Solutions.
+
     </div>
 
-    <div class="card">
-      <div class="number">04</div>
-      <h3>Network Signage</h3>
-      <p>
-        Consistent signage execution for multi-location brand networks.
-      </p>
-    </div>
+  </footer>
 
-    <div class="card">
-      <div class="number">05</div>
-      <h3>ACP & Fascia</h3>
-      <p>
-        Clean, durable fascia and ACP signage solutions.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="number">06</div>
-      <h3>Repair & Maintenance</h3>
-      <p>
-        Sign replacement, repair, installation and ongoing maintenance.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- WHY SPN -->
-
-<section>
-
-  <h2 class="section-title">
-    Why SPN
-  </h2>
-
-  <div class="services">
-
-    <div class="card">
-      <div class="number">01</div>
-      <h3>End-to-End Execution</h3>
-      <p>
-        From fabrication and finishing to delivery, installation and service.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="number">02</div>
-      <h3>Professional Fabrication</h3>
-      <p>
-        Signage solutions built with attention to finish, durability and brand presentation.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="number">03</div>
-      <h3>Installation & Service</h3>
-      <p>
-        Installation, replacement, repair and maintenance support for signage networks.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="number">04</div>
-      <h3>Multi-Location Rollouts</h3>
-      <p>
-        Consistent signage execution for brands operating across multiple locations.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-  <h2 class="section-title">
-    One Partner. End to End.
-  </h2>
-
-  <p>
-    SPN delivers complete signage execution — from fabrication and
-    finishing to delivery, installation and service. Built for businesses
-    that need professional execution and consistent brand visibility.
-  </p>
-
-</section>
-
-
-<!-- SELECTED WORK -->
-
-<section>
-
-  <h2 class="section-title">
-    Selected Work
-  </h2>
-
-  <div class="portfolio-grid">
-
-    <div class="portfolio-item">
-      <img src="p09_02.jpeg" alt="SPN signage project">
-    </div>
-
-    <div class="portfolio-item">
-      <img src="p09_04.jpeg" alt="SPN signage project">
-    </div>
-
-    <div class="portfolio-item">
-      <img src="p09_06.jpeg" alt="SPN signage project">
-    </div>
-
-    <div class="portfolio-item">
-      <img src="p11_03.jpeg" alt="SPN signage project">
-    </div>
-
-    <div class="portfolio-item">
-      <img src="p11_04.jpeg" alt="SPN signage project">
-    </div>
-
-    <div class="portfolio-item">
-      <img src="p11_07.jpeg" alt="SPN signage project">
-    </div>
-
-    <div class="portfolio-item">
-      <img src="p12_04.jpeg" alt="SPN signage project">
-    </div>
-
-    <div class="portfolio-item">
-      <img src="p13_02.jpeg" alt="SPN signage project">
-    </div>
-
-    <div class="portfolio-item">
-      <img src="p13_06.jpeg" alt="SPN signage project">
-    </div>
-
-    <div class="portfolio-item">
-      <img src="p16_05.jpeg" alt="SPN signage project">
-    </div>
-
-    <div class="portfolio-item">
-      <img src="p16_07.jpeg" alt="SPN signage project">
-    </div>
-
-    <div class="portfolio-item">
-      <img src="p17_02.jpeg" alt="SPN signage project">
-    </div>
-
-  </div>
-</section>
-
-
-<!-- BUILT FOR -->
-
-<section>
-
-  <h2 class="section-title">
-    Built For
-  </h2>
-
-  <div class="targets">
-
-    <div class="tag">
-      Showrooms & Dealerships
-    </div>
-
-    <div class="tag">
-      Corporate Offices
-    </div>
-
-    <div class="tag">
-      Service Centres
-    </div>
-
-    <div class="tag">
-      Retail & Commercial
-    </div>
-
-    <div class="tag">
-      Multi-location Networks
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-  <h2 class="section-title">
-    Start a Project
-  </h2>
-
-  <p>
-    #94, Hommadevanahalli, C.K. Palya Cross<br>
-    Hommadevanahalli, Bangalore – 560083
-  </p>
-
-  <p>
-    <strong>Call:</strong>
-
-    <a
-      href="https://wa.me/919066476900"
-      target="_blank"
-      style="color:#fff;text-decoration:none;">
-      9066476900
-    </a>
-  </p>
-
-  <a
-    class="btn"
-    href="mailto:info@spndisplaysolutions.in">
-    info@spndisplaysolutions.in
-  </a>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-  © 2026 SPN DISPLAY SOLUTIONS — Signage & Display Solutions.
-</footer>
 
 </body>
 </html>
